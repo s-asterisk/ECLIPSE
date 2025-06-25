@@ -1,0 +1,8 @@
+# Set default text file handling
+* text=auto
+
+# Treat Markdown files as text
+*.md text
+
+# Handle line endings for shell scripts
+*.sh text eol=lf

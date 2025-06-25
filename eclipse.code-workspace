@@ -1,0 +1,48 @@
+{
+  "folders": [
+    {
+      "name": "Core",
+      "path": "."
+    },
+    {
+      "name": "Architecture",
+      "path": "architecture"
+    },
+    {
+      "name": "Docs",
+      "path": "docs"
+    },
+    {
+      "name": "Branding",
+      "path": "resources/branding"
+    },
+    {
+      "name": "Hardware Profiles",
+      "path": "resources/hardware-profiles"
+    },
+    {
+      "name": "Workflows",
+      "path": ".github/workflows"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/.DS_Store": true,
+      "**/Thumbs.db": true
+    },
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "editor.formatOnSave": true
+  },
+  "extensions": {
+    "recommendations": [
+      "ms-vscode.cpptools",
+      "ms-python.python",
+      "esbenp.prettier-vscode",
+      "editorconfig.editorconfig",
+      "yzhang.markdown-all-in-one"
+    ]
+  }
+}

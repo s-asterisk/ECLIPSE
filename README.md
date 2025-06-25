@@ -1,5 +1,5 @@
 # ECLIPSE
-![Screenshot 2025-06-19 051136](https://github.com/user-attachments/assets/4e44873a-b8b3-4f5c-9d53-f79d86511223)
+![ECLIPSE](https://github.com/user-attachments/assets/4e44873a-b8b3-4f5c-9d53-f79d86511223)
 
 **ECLIPSE** is a next-generation, cross-platform desktop application designed to transform any modern Windows or Linux workstation into a **fully featured, zero-cost embedded-systems and IoT simulation lab**. Targeted at students, hobbyists, educators, and developers on a budget, ECLIPSE removes the need for physical Raspberry Pi or Arduino hardware by delivering high-fidelity, real-time virtual twins of these platforms.
 

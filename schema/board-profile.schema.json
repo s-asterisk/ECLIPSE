@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ECLIPSE Hardware Profile",
+  "description": "Defines microcontroller and board characteristics",
+  "type": "object",
+  "definitions": {
+    "analogPin": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "pattern": "^GPIO\\d{1,2}$" },
+        "voltage_range": {
+          "type": "array",
+          "items": { "type": "number" },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "impedance": { "type": "number", "minimum": 0 },
+        "adc_resolution": { "type": "integer", "enum": [8, 10, 12, 14, 16] },
+        "noise_profile": { "type": "string", "enum": ["gaussian", "uniform", "burst"] }
+      },
+      "required": ["id", "voltage_range"]
+    },
+    "digitalPin": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "pull_resistor": { "type": "string", "enum": ["none", "up", "down"] },
+        "slew_rate": { "type": "string", "enum": ["slow", "fast"] }
+      }
+    }
+  },
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "schema_version": { "type": "string", "const": "1.0" },
+        "eclipse_min_version": { "type": "string" }
+      },
+      "required": ["schema_version"]
+    },
+    "pins": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          { "$ref": "#/definitions/analogPin" },
+          { "$ref": "#/definitions/digitalPin" }
+        ]
+      }
+    },
+    "power_domains": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "voltage_nominal": { "type": "number" },
+          "tolerance": { "type": "number", "maximum": 0.3 }
+        },
+        "required": ["name", "voltage_nominal"]
+      }
+    }
+  },
+  "required": ["metadata", "pins"]
+}
