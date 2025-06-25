@@ -87,6 +87,20 @@ We are currently:
 
 ---
 
+## Licensing Acknowledgements
+
+This project uses:
+
+- **QEMU** – [https://www.qemu.org](https://www.qemu.org)  
+  Licensed under the GNU General Public License v2. This project does not modify or distribute QEMU. See QEMU’s license [here](https://www.qemu.org/license/).
+
+- **Renode** – [https://renode.io](https://renode.io)  
+  Licensed under the MIT License. Copyright (c) Antmicro.
+
+See `/LICENSE` for full licensing terms.
+
+---
+
 ## Stay Connected
 
 - Project updates and public builds will be announced here.
